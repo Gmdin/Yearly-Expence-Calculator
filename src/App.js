@@ -1,5 +1,6 @@
 import Expense from "./components/Expences/Expense";
-import NewExpenseForm from "./components/NewExpense/NewExpenseForm";
+import NewExpense from "./components/NewExpense/NewExpense";
+
 function App() {
   const expense=[
     {
@@ -21,9 +22,13 @@ function App() {
       dat:new Date(2021,5,3),
     }
   ];
+  const getNewExpenseData=exp=>{
+    console.log("app.js");
+    console.log(exp);
+  }
   return (
     <div>
-      <NewExpenseForm/>
+      <NewExpense dataGetFromInput={getNewExpenseData}/>
      <Expense expense={expense}/>
     </div>
   );

@@ -1,11 +1,11 @@
 import NewExpenseForm from './NewExpenseForm';
 import './NewExpense.css';
-const NewExpense=()=>{
+const NewExpense=(props)=>{
     const formSubmitSaveData=addExpence=>{
         const expenseData={
             ...addExpence
         };
-        console.log(expenseData);
+        props.dataGetFromInput(expenseData);
     };
     return(
         <div className="new-expense">
