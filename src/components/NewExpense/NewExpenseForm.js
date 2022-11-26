@@ -43,11 +43,12 @@ const NewExpenseForm=(props)=>{
     const formSubmitHandler=(event)=>{
         event.preventDefault();
         const addExpencefo={
-            tit:title,
-            pri:price,
+            id:(Math.random() + 1).toString(36),
+            title:title,
+            price:price,
             dat:new Date(date),
         }
-        console.log(addExpencefo);
+        
         props.formSubmitSaveData(addExpencefo);
         
         setTitle('');
